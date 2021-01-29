@@ -16,9 +16,9 @@
       <td class="center"><%= book.genre %></td>
       <td class="center">   <%= book.author %></td>
       <td class="actions">
-        <%= link_to("Show", "subject_path(book)", :class => 'action show') %>
-        <%= link_to("Edit", "edit_subject_path(book)", :class => 'action edit') %>
-        <%= link_to("Delete", "delete_subject_path(book)", :class => 'action delete') %>
+        <%= link_to("Show", book_path(book), :class => 'action show') %>
+        <%= link_to("Edit", edit_book_path(book), :class => 'action edit') %>
+        <%= link_to("Delete", delete_book_path(book), :class => 'action delete') %>
       </td>
     </tr>
     <% end %>

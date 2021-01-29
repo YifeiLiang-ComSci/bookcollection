@@ -1,2 +1,15 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<%= link_to("<< Back to Book Collection", books_path, :class => 'back-link') %>
+
+<div class="book new">
+  <h2>Create book</h2>
+
+  <%= form_for(@book, :url => books_path, :method => 'post') do |f| %>
+  
+    <%= render(:partial => 'form', :locals => {:f=>f})%>
+
+    <div class="form-buttons">
+      <%= f.submit("Create Book") %>
+    </div>
+
+  <% end %>
+</div>
