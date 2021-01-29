@@ -1,2 +1,16 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+
+<%= link_to("<< Back to Book Collection", books_path, :class => 'back-link') %>
+
+<div class="books edit">
+  <h2>Update Book</h2>
+
+  <%= form_for(@book) do |f| %>
+  
+       <%= render(:partial => 'form', :locals => {:f=>f})%>
+
+    <div class="form-buttons">
+      <%= f.submit("Update Book") %>
+    </div>
+
+  <% end %>
+</div>
