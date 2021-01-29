@@ -1,2 +1,37 @@
-<h1>Books#delete</h1>
-<p>Find me in app/views/books/delete.html.erb</p>
+<%= link_to("<< Back to Book Collection", books_path, :class => 'back-link') %>
+
+<div class="books delete">
+  <h2>Delete Book</h2>
+
+  <%= form_for(@book, :method => 'delete') do |book| %>
+  
+    <p>Are you sure you want to permanently delete this book?</p>
+    <table summary="Book form fields">
+      <tr>
+        <th>Title</th>
+        <td><%= @book.title %></td>
+      </tr>
+      <tr>
+        <th>Author</th>
+        <td><%= @book.author %></td>
+      </tr>
+      <tr>
+        <th>Genre</th>
+        <td><%= @book.genre%></td>
+      </tr>
+      <tr>
+        <th>Price</th>
+        <td><%= @book.price %></td>
+      </tr>
+      <tr>
+        <th>Published Date</th> 
+        <td><%= @book.published_date.strftime('%Y-%m-%d') %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= book.submit("Delete Book") %>
+    </div>
+
+  <% end %>
+</div>
