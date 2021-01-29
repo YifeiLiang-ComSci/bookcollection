@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   def index
+    @books = Book.order("title")
   end
 
   def show
@@ -24,5 +25,5 @@ class BooksController < ApplicationController
 
   def destroy
   end
-  
+
 end
