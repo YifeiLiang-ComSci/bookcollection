@@ -4943,3 +4943,32 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 1.1ms | Allocations: 4825)
 
 
+Started GET "/" for 127.0.0.1 at 2021-02-01 22:29:23 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/yifeiliang/Documents/GitHub/bookcollection/app/controllers/books_controller.rb:8: `@' without identifiers is not allowed as an instance variable name
+    name = @  book.title
+           ^
+/Users/yifeiliang/Documents/GitHub/bookcollection/app/controllers/books_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+    name = @  book.title
+              ^~~~
+):
+  
+app/controllers/books_controller.rb:8: `@' without identifiers is not allowed as an instance variable name
+app/controllers/books_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/books_controller.rb:8: `@' without identifiers is not allowed as an instance variable name
+app/controllers/books_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/books_controller.rb:8: `@' without identifiers is not allowed as an instance variable name
+app/controllers/books_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/" for 127.0.0.1 at 2021-02-01 22:29:32 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY id[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 7659)
+Completed 200 OK in 82ms (Views: 70.2ms | ActiveRecord: 2.3ms | Allocations: 10600)
+
+

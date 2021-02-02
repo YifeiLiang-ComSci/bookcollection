@@ -5,7 +5,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    name = @  book.title
+    name = @book.title
     flash[:notice] = 'You just viewd Book: '+name + "!"
   end
 
