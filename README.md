@@ -1,5 +1,5 @@
 # Assignment-1-Ruby-on-Rails-Book-Collection
-
+link to the app on heroku: https://nameless-sea-54576.herokuapp.com/
 # Objective
 The primary objective of this assignment is to help you get familiar with Ruby on Rails, and deployment to Heroku. Specifically, we would be building a simple CRUD Application.
 
