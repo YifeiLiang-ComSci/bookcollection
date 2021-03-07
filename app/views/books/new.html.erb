@@ -1,5 +1,6 @@
 <%= link_to("<< Back to Book Collection", books_path, :class => 'back-link') %>
 
+<p style="color:red; text-align:center;"   ><mark><%= @book.errors.full_messages.first if @book.errors.any? %></mark></p>
 <div class="book new">
   <h2>Create book</h2>
 

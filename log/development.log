@@ -4972,3 +4972,355 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 82ms (Views: 70.2ms | ActiveRecord: 2.3ms | Allocations: 10600)
 
 
+Started GET "/" for 127.0.0.1 at 2021-03-06 22:03:25 -0600
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (4.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY id[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 7916)
+Completed 200 OK in 64ms (Views: 44.2ms | ActiveRecord: 4.3ms | Allocations: 11480)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2021-03-06 22:03:35 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 16.7ms | Allocations: 2911)
+  Rendered books/new.html.erb within layouts/application (Duration: 21.1ms | Allocations: 3706)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 7156)
+Completed 200 OK in 168ms (Views: 29.2ms | ActiveRecord: 82.6ms | Allocations: 13252)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-06 22:03:41 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"Second Book", "author"=>"asdas", "genre"=>"Romance", "price"=>"18.0", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:22:in `create'
+  [1m[36mBook Create (27.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Second Book"], ["author", "asdas"], ["genre", "Romance"], ["price", 18.0], ["published_date", "2021-03-07 00:00:00"], ["created_at", "2021-03-07 04:03:41.145230"], ["updated_at", "2021-03-07 04:03:41.145230"]]
+  ↳ app/controllers/books_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 49ms (ActiveRecord: 37.8ms | Allocations: 3433)
+
+
+Started GET "/books" for 127.0.0.1 at 2021-03-06 22:03:41 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY id[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4373)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.0ms | Allocations: 4973)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-06 23:58:25 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (13.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY id[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 63.9ms | Allocations: 6576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 112.0ms | Allocations: 12899)
+Completed 200 OK in 144ms (Views: 84.4ms | ActiveRecord: 33.0ms | Allocations: 16722)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2021-03-06 23:58:28 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 62.5ms | Allocations: 3420)
+  Rendered books/new.html.erb within layouts/application (Duration: 70.3ms | Allocations: 4206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.9ms | Allocations: 7750)
+Completed 200 OK in 116ms (Views: 99.4ms | ActiveRecord: 0.0ms | Allocations: 8381)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-06 23:58:29 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 5.2ms | Allocations: 1533)
+  Rendered books/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 5181)
+Completed 200 OK in 30ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 6876)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-06 23:58:31 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.5ms | Allocations: 1391)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1671)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5039)
+Completed 200 OK in 30ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 6353)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2021-03-06 23:59:09 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.0ms | Allocations: 1077)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1362)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 4812)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.0ms | Allocations: 5279)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-06 23:59:10 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY id[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 869)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4329)
+Completed 200 OK in 52ms (Views: 11.1ms | ActiveRecord: 2.5ms | Allocations: 5529)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-06 23:59:45 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 16.4ms | Allocations: 4697)
+  Rendered books/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 5199)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 5268)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms | Allocations: 7326)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for #<ActionView::Helpers::FormBuilder:0x00007fca43e47e50 @nested_child_index={}, @options={:url=>"/books", :html=>{:class=>"new_book", :id=>"new_book", :method=>"post", :authenticity_token=>nil}}, @template=#<ActionView::Base:0x00000000008340>, @object=#<Book id: nil, title: "", author: "", genre: "Romance", price: nil, published_date: "2021-03-07 00:00:00.000000000 +0000", created_at: nil, updated_at: nil>, @object_name="book", @default_options={}, @default_html_options={}, @multipart=nil, @index=nil>):
+    1:  <%=f.errors.messages%>
+    2:     <table summary="Books form fields">
+    3:       <tr>
+    4:         <th>Title</th>
+  
+app/views/books/_form.html.erb:1
+app/views/books/new.html.erb:8
+app/views/books/new.html.erb:6
+app/controllers/books_controller.rb:27:in `create'
+Started GET "/books/new" for 127.0.0.1 at 2021-03-07 00:00:59 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 9.9ms | Allocations: 2002)
+  Rendered books/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 2506)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 2575)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms | Allocations: 3887)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for #<ActionView::Helpers::FormBuilder:0x00007fca47600860 @nested_child_index={}, @options={:url=>"/books", :html=>{:class=>"new_book", :id=>"new_book", :method=>"post", :authenticity_token=>nil}}, @template=#<ActionView::Base:0x000000000087c8>, @object=#<Book id: nil, title: nil, author: nil, genre: nil, price: nil, published_date: nil, created_at: nil, updated_at: nil>, @object_name="book", @default_options={}, @default_html_options={}, @multipart=nil, @index=nil>):
+    1: <%= f.errors.full_messages.first if f.errors.any? %>
+    2:     <table summary="Books form fields">
+    3:       <tr>
+    4:         <th>Title</th>
+  
+app/views/books/_form.html.erb:1
+app/views/books/new.html.erb:8
+app/views/books/new.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-03-07 00:01:21 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (6.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY id[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1186)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 4892)
+Completed 200 OK in 95ms (Views: 50.1ms | ActiveRecord: 6.2ms | Allocations: 6251)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2021-03-07 00:01:22 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 5.2ms | Allocations: 1259)
+  Rendered books/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1875)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 5323)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 5911)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:01:23 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 5.2ms | Allocations: 1955)
+  Rendered books/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 5601)
+Completed 200 OK in 32ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 6918)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:01:25 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 4.7ms | Allocations: 1934)
+  Rendered books/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2214)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5589)
+Completed 200 OK in 60ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 6890)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:01:26 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 5.2ms | Allocations: 1929)
+  Rendered books/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5575)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 6873)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:01:27 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 5.5ms | Allocations: 1929)
+  Rendered books/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5575)
+Completed 200 OK in 25ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 6873)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:02:59 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 6.9ms | Allocations: 2108)
+  Rendered books/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 3301)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 6896)
+Completed 200 OK in 54ms (Views: 42.0ms | ActiveRecord: 0.0ms | Allocations: 8961)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:03:02 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 5.0ms | Allocations: 1929)
+  Rendered books/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2747)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 6122)
+Completed 200 OK in 32ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 7421)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:03:03 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.3ms | Allocations: 1929)
+  Rendered books/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2747)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 6113)
+Completed 200 OK in 27ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 7411)
+
+
+Started GET "/books" for 127.0.0.1 at 2021-03-07 00:03:05 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (11.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY id[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 1175)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 4635)
+Completed 200 OK in 36ms (Views: 20.4ms | ActiveRecord: 11.4ms | Allocations: 5353)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2021-03-07 00:03:07 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.2ms | Allocations: 1076)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 4850)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms | Allocations: 5310)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:03:09 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 5.3ms | Allocations: 1929)
+  Rendered books/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2761)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 6127)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 0.0ms | Allocations: 7440)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:03:13 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"Second Book", "author"=>"", "genre"=>"Romance", "price"=>"", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 4.7ms | Allocations: 1507)
+  Rendered books/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2058)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 5424)
+Completed 200 OK in 25ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 6719)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-03-07 00:03:19 -0600
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"Second Book", "author"=>"asdas", "genre"=>"Romance", "price"=>"18.0", "published_date(2i)"=>"3", "published_date(3i)"=>"7", "published_date(1i)"=>"2021"}, "commit"=>"Create Book"}
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:22:in `create'
+  [1m[36mBook Create (24.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "price", "published_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Second Book"], ["author", "asdas"], ["genre", "Romance"], ["price", 18.0], ["published_date", "2021-03-07 00:00:00"], ["created_at", "2021-03-07 06:03:19.276215"], ["updated_at", "2021-03-07 06:03:19.276215"]]
+  ↳ app/controllers/books_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 61ms (ActiveRecord: 49.8ms | Allocations: 3108)
+
+
+Started GET "/books" for 127.0.0.1 at 2021-03-07 00:03:19 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY id[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 960)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4420)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 2.1ms | Allocations: 5019)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2021-03-07 00:03:32 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.2ms | Allocations: 1076)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.7ms | Allocations: 5420)
+Completed 200 OK in 88ms (Views: 87.6ms | ActiveRecord: 0.0ms | Allocations: 5880)
+
+
