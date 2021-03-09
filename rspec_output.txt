@@ -1,9 +1,7 @@
 
 As a User I want to add book
-  Successful
-.    added the book inside the bookcollection
-  Unsuccessful
-.    show the warning message for incorrect title
+.  Successful
+.  Unsuccessful
 
 Flash Message
 .  shows flash message after adding a book
@@ -21,10 +19,10 @@ Authors
 .  should output the list of authors of a book after using function list_of_authors
 
 
-Finished in 5.9 seconds (files took 6.57 seconds to load)
+Finished in 0.33688 seconds (files took 2.46 seconds to load)
 11 examples, 0 failures
 
-Finished in 5.9 seconds (files took 6.57 seconds to load)
+Finished in 0.33688 seconds (files took 2.46 seconds to load)
 11 examples, 0 failures
 
 

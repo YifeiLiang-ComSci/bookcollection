@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 
-RSpec.describe 'As a User I want to add book ', type: :system do
-    describe 'Successful' do
-        it 'added the book inside the bookcollection' do
+feature 'As a User I want to add book ' do
+    scenario 'Successful' do
             visit new_book_path
 
             fill_in "title", with: "asdasd"
@@ -20,11 +19,9 @@ RSpec.describe 'As a User I want to add book ', type: :system do
 
             
             
-        end
     end
 
-    describe "Unsuccessful" do
-        it 'show the warning message for incorrect title' do
+    scenario "Unsuccessful" do
             visit new_book_path
 
             fill_in "title", with: ""
@@ -38,9 +35,6 @@ RSpec.describe 'As a User I want to add book ', type: :system do
             click_on "Create Book"
             expect(page).to have_content('Title must be given please')
 
-            
-            
-        end
     end
 end
 
