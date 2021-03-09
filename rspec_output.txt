@@ -1,0 +1,28 @@
+
+As a User I want to add book
+.  Successful
+.  Unsuccessful
+
+Flash Message
+.  shows flash message after adding a book
+
+Book
+.  is valid with valid attributes
+.  is valid with a valid title
+.  is not valid with a nil title
+.  is valid with a valid author
+.  is not valid with a nil author
+.  is not valid with a valid price
+.  is not valid with a nil published_date
+
+Authors
+.  should output the list of authors of a book after using function list_of_authors
+
+
+Finished in 0.33688 seconds (files took 2.46 seconds to load)
+11 examples, 0 failures
+
+Finished in 0.33688 seconds (files took 2.46 seconds to load)
+11 examples, 0 failures
+
+
