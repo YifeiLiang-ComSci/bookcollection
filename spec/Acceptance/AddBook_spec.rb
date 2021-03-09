@@ -36,8 +36,7 @@ RSpec.describe 'Add Book ', type: :system do
             select '2016', from: 'book_published_date_1i'
 
             click_on "Create Book"
-            
-            expect(page).to have_content('Title must be given please!')
+            expect(page).to have_content('Title must be given please')
 
             
             
