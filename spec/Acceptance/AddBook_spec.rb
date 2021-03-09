@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 
-RSpec.describe 'Add Book ', type: :system do
+RSpec.describe 'As a User I want to add book ', type: :system do
     describe 'Successful' do
         it 'added the book inside the bookcollection' do
             visit new_book_path

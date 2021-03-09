@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 
-RSpec.describe 'Flash Message ', type: :system do
+RSpec.describe 'Flash Message ', type: :feature do
     it 'shows flash message after adding a book' do
         visit new_book_path
 

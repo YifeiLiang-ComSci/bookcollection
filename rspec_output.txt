@@ -1,5 +1,5 @@
 
-Add Book
+As a User I want to add book
   Successful
 .    added the book inside the bookcollection
   Unsuccessful
@@ -21,10 +21,10 @@ Authors
 .  should output the list of authors of a book after using function list_of_authors
 
 
-Finished in 9.47 seconds (files took 6.18 seconds to load)
+Finished in 5.9 seconds (files took 6.57 seconds to load)
 11 examples, 0 failures
 
-Finished in 9.47 seconds (files took 6.18 seconds to load)
+Finished in 5.9 seconds (files took 6.57 seconds to load)
 11 examples, 0 failures
 
 
